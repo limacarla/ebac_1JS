@@ -2,13 +2,15 @@ const form = document.getElementById('form-numeros');
 
 form.addEventListener ('submit' , function(e){
     e.preventDefault();
-
+    
     const numero1 = document.getElementById('numeroA').value;
     const numero2 = document.getElementById
     ('numeroB').value;
 
     const mensagemMencao = `Os números são válidos!`
     const mensagemError = `Inválido! Digite um número maior que o A.`
+    document.querySelector('.error').style.display = 'none'
+    document.querySelector('.sucesso').style.display = 'none'
 
     if (numero1 < numero2){
 
